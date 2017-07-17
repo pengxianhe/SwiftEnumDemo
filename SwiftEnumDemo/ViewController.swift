@@ -50,4 +50,56 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.contentLabel.text = model.content
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case 0:
+                performSegue(withIdentifier: "healthDataVC", sender: nil)
+            case 1:
+                performSegue(withIdentifier: "unitVC", sender: nil)
+            case 2:
+                performSegue(withIdentifier: "languageVC", sender: nil)
+            case 3:
+                performSegue(withIdentifier: "introduceVC", sender: nil)
+            default:
+                break
+            }
+            
+        case 1:
+            performSegue(withIdentifier: "modeVC", sender: nil)
+            
+        case 2:
+            switch indexPath.row {
+            case 0:
+                performSegue(withIdentifier: "shareVC", sender: nil)
+            case 1:
+                performSegue(withIdentifier: "feedbackVC", sender: nil)
+            case 2:
+                performSegue(withIdentifier: "aboutVC", sender: nil)
+            case 3:
+                performSegue(withIdentifier: "scoreVC", sender: nil)
+            default:
+                break
+            }
+
+        case 3:
+            switch indexPath.row {
+            case 0:
+                performSegue(withIdentifier: "healthDataVC", sender: nil)
+            case 1:
+                performSegue(withIdentifier: "healthDataVC", sender: nil)
+            case 2:
+                performSegue(withIdentifier: "healthDataVC", sender: nil)
+            case 3:
+                performSegue(withIdentifier: "healthDataVC", sender: nil)
+            default:
+                break
+            }
+
+        default:
+            break
+        }
+    }
 }

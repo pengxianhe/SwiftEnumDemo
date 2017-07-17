@@ -88,6 +88,7 @@
                         <segue destination="qFR-kg-W5q" kind="show" identifier="modeVC" id="Ckh-18-uJi"/>
                         <segue destination="saN-XY-qVK" kind="show" identifier="shareVC" id="Q8M-Ml-dHk"/>
                         <segue destination="5CM-o7-0Io" kind="show" identifier="scoreVC" id="jaa-J5-sTm"/>
+                        <segue destination="GW1-OL-Ka2" kind="show" identifier="feedbackVC" id="tXw-jf-CS8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -263,6 +264,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7VX-in-nrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1684" y="-700"/>
+        </scene>
+        <!--意见反馈-->
+        <scene sceneID="uRm-L7-q4I">
+            <objects>
+                <viewController id="GW1-OL-Ka2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M8R-65-ki5"/>
+                        <viewControllerLayoutGuide type="bottom" id="dsn-da-Gip"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GeC-eZ-cxG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="意见反馈" id="cs6-Le-uUS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WxY-ah-OQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="183"/>
         </scene>
     </scenes>
 </document>
