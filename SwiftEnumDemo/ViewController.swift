@@ -85,6 +85,33 @@ enum SetContent {
             return "set_rateus"
         }
     }
+    
+    var segueID: String {
+        switch self {
+        case .healthData:
+            return "healthDataVC"
+        case .unit:
+            return "unitVC"
+        case .language:
+            return "languageVC"
+        case .introduce:
+            return "introduceVC"
+        case .mode:
+            return "modeVC"
+        case .share:
+            return "shareVC"
+        case .feedback:
+            return "feedbackVC"
+        case .about:
+            return "aboutVC"
+        case .score:
+            return "scoreVC"
+        }
+    }
+    
+    func showDetailVC(originalVC: UIViewController) {
+        originalVC.performSegue(withIdentifier: segueID, sender: nil)
+    }
 }
 
 class ViewController: UIViewController {
@@ -122,25 +149,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = dataArray[indexPath.section][indexPath.row]
-        switch model {
-        case .healthData:
-            performSegue(withIdentifier: "healthDataVC", sender: nil)
-        case .unit:
-            performSegue(withIdentifier: "unitVC", sender: nil)
-        case .language:
-            performSegue(withIdentifier: "languageVC", sender: nil)
-        case .introduce:
-            performSegue(withIdentifier: "introduceVC", sender: nil)
-        case .mode:
-            performSegue(withIdentifier: "modeVC", sender: nil)
-        case .share:
-            performSegue(withIdentifier: "shareVC", sender: nil)
-        case .feedback:
-            performSegue(withIdentifier: "feedbackVC", sender: nil)
-        case .about:
-            performSegue(withIdentifier: "aboutVC", sender: nil)
-        case .score:
-            performSegue(withIdentifier: "scoreVC", sender: nil)
-        }
+        model.showDetailVC(originalVC: self)
     }
 }
