@@ -63,6 +63,28 @@ enum SetContent {
             return "9"
         }
     }
+    var imageName: String {
+        switch self {
+        case .healthData:
+            return "set_healthData"
+        case .unit:
+            return "set_unit"
+        case .language:
+            return "set_language"
+        case .introduce:
+            return "set_instructions"
+        case .mode:
+            return "set_workout_mode"
+        case .share:
+            return "set_share"
+        case .feedback:
+            return "set_feedback"
+        case .about:
+            return "set_about"
+        case .score:
+            return "set_rateus"
+        }
+    }
 }
 
 class ViewController: UIViewController {
@@ -94,6 +116,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let model = dataArray[indexPath.section][indexPath.row]
         cell.titleLabel.text = model.title
         cell.contentLabel.text = model.content
+        cell.iconImageView.image = UIImage(named: model.imageName)
         return cell
     }
     

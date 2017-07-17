@@ -37,8 +37,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="set_about" translatesAutoresizingMaskIntoConstraints="NO" id="XjV-c3-Zcf">
+                                                    <rect key="frame" x="16" y="12" width="20" height="20"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ7-RO-blQ">
-                                                    <rect key="frame" x="16" y="12" width="42" height="21"/>
+                                                    <rect key="frame" x="41" y="12" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -51,14 +54,17 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="uJ7-RO-blQ" firstAttribute="leading" secondItem="53c-ob-O6U" secondAttribute="leading" constant="16" id="HKf-mj-WJg"/>
                                                 <constraint firstAttribute="trailing" secondItem="stf-Wb-iDK" secondAttribute="trailing" constant="17" id="br0-Dc-w1O"/>
                                                 <constraint firstItem="stf-Wb-iDK" firstAttribute="centerY" secondItem="53c-ob-O6U" secondAttribute="centerY" id="iEr-73-xUA"/>
+                                                <constraint firstItem="XjV-c3-Zcf" firstAttribute="leading" secondItem="53c-ob-O6U" secondAttribute="leading" constant="16" id="klQ-dB-cXZ"/>
                                                 <constraint firstItem="uJ7-RO-blQ" firstAttribute="centerY" secondItem="53c-ob-O6U" secondAttribute="centerY" id="lL0-FE-Lvc"/>
+                                                <constraint firstItem="uJ7-RO-blQ" firstAttribute="leading" secondItem="XjV-c3-Zcf" secondAttribute="trailing" constant="5" id="vjn-O9-WUR"/>
+                                                <constraint firstItem="XjV-c3-Zcf" firstAttribute="centerY" secondItem="53c-ob-O6U" secondAttribute="centerY" id="z6I-6C-Q8t"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentLabel" destination="stf-Wb-iDK" id="Eaf-lK-iyu"/>
+                                            <outlet property="iconImageView" destination="XjV-c3-Zcf" id="ATU-Am-qoX"/>
                                             <outlet property="titleLabel" destination="uJ7-RO-blQ" id="t9d-Uo-ANe"/>
                                         </connections>
                                     </tableViewCell>
@@ -285,4 +291,7 @@
             <point key="canvasLocation" x="873" y="183"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="set_about" width="20" height="20"/>
+    </resources>
 </document>
