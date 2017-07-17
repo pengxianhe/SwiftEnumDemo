@@ -12,6 +12,7 @@
 		086B16311F1C990F009416DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 086B162F1F1C990F009416DD /* Main.storyboard */; };
 		086B16331F1C990F009416DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086B16321F1C990F009416DD /* Assets.xcassets */; };
 		086B16361F1C990F009416DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 086B16341F1C990F009416DD /* LaunchScreen.storyboard */; };
+		086B163E1F1C99F2009416DD /* TitleCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B163D1F1C99F2009416DD /* TitleCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		086B16321F1C990F009416DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		086B16351F1C990F009416DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		086B16371F1C990F009416DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		086B163D1F1C99F2009416DD /* TitleCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				086B162B1F1C990F009416DD /* AppDelegate.swift */,
 				086B162D1F1C990F009416DD /* ViewController.swift */,
+				086B163D1F1C99F2009416DD /* TitleCellTableViewCell.swift */,
 				086B162F1F1C990F009416DD /* Main.storyboard */,
 				086B16321F1C990F009416DD /* Assets.xcassets */,
 				086B16341F1C990F009416DD /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086B163E1F1C99F2009416DD /* TitleCellTableViewCell.swift in Sources */,
 				086B162E1F1C990F009416DD /* ViewController.swift in Sources */,
 				086B162C1F1C990F009416DD /* AppDelegate.swift in Sources */,
 			);
@@ -299,6 +303,7 @@
 				086B163C1F1C990F009416DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
