@@ -8,7 +8,13 @@
 
 import UIKit
 
-enum SetContent {
+protocol BaseCellInfo {
+    var title: String { get }
+    var content: String { get }
+    var imageName: String { get }
+}
+
+enum SetContent: BaseCellInfo {
     case healthData
     case unit
     case language
@@ -141,9 +147,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TitleCellTableViewCell") as! TitleCellTableViewCell
         let model = dataArray[indexPath.section][indexPath.row]
-        cell.titleLabel.text = model.title
-        cell.contentLabel.text = model.content
-        cell.iconImageView.image = UIImage(named: model.imageName)
+        cell.configureCell(model: model)
         return cell
     }
     

@@ -23,5 +23,11 @@ class TitleCellTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func configureCell(model: BaseCellInfo) {
+        titleLabel.text = model.title
+        contentLabel.text = model.content
+        iconImageView.image = UIImage(named: model.imageName)
+    }
 
 }
