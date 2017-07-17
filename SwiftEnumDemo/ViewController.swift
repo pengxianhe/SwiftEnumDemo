@@ -8,24 +8,70 @@
 
 import UIKit
 
-struct SetContent {
-    let title: String
-    let content: String
+enum SetContent {
+    case healthData
+    case unit
+    case language
+    case introduce
+    case mode
+    case share
+    case feedback
+    case about
+    case score
+    
+    var title: String {
+        switch self {
+        case .healthData:
+            return "健康数据"
+        case .unit:
+            return "公英制"
+        case .language:
+            return "语言选择"
+        case .introduce:
+            return "介绍说明"
+        case .mode:
+            return "训练模式"
+        case .share:
+            return "分享"
+        case .feedback:
+            return "意见反馈"
+        case .about:
+            return "关于"
+        case .score:
+            return "评分"
+        }
+    }
+    var content: String {
+        switch self {
+        case .healthData:
+            return "1"
+        case .unit:
+            return "2"
+        case .language:
+            return "3"
+        case .introduce:
+            return "4"
+        case .mode:
+            return "5"
+        case .share:
+            return "6"
+        case .feedback:
+            return "7"
+        case .about:
+            return "8"
+        case .score:
+            return "9"
+        }
+    }
 }
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var dataArray: [[SetContent]] = [[SetContent(title: "健康数据", content: "1"),
-                                      SetContent(title: "公英制", content: "2"),
-                                      SetContent(title: "分享", content: "6"),
-                                      SetContent(title: "语言选择", content: "3"),
-                                      SetContent(title: "介绍说明", content: "4")],
-                                 [SetContent(title: "训练模式", content: "5")],
-                                 [SetContent(title: "意见反馈", content: "7"),
-                                  SetContent(title: "关于", content: "8"),
-                                  SetContent(title: "评分", content: "9")]]
+    var dataArray: [[SetContent]] = [[.healthData, .unit, .share, .language, .introduce],
+                                     [.mode],
+                                     [.feedback, .about, .score]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,40 +98,26 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.section {
-        case 0:
-            switch indexPath.row {
-            case 0:
-                performSegue(withIdentifier: "healthDataVC", sender: nil)
-            case 1:
-                performSegue(withIdentifier: "unitVC", sender: nil)
-            case 2:
-                performSegue(withIdentifier: "shareVC", sender: nil)
-            case 3:
-                performSegue(withIdentifier: "languageVC", sender: nil)
-            case 4:
-                performSegue(withIdentifier: "introduceVC", sender: nil)
-            default:
-                break
-            }
-            
-        case 1:
+        let model = dataArray[indexPath.section][indexPath.row]
+        switch model {
+        case .healthData:
+            performSegue(withIdentifier: "healthDataVC", sender: nil)
+        case .unit:
+            performSegue(withIdentifier: "unitVC", sender: nil)
+        case .language:
+            performSegue(withIdentifier: "languageVC", sender: nil)
+        case .introduce:
+            performSegue(withIdentifier: "introduceVC", sender: nil)
+        case .mode:
             performSegue(withIdentifier: "modeVC", sender: nil)
-            
-        case 2:
-            switch indexPath.row {
-            case 0:
-                performSegue(withIdentifier: "feedbackVC", sender: nil)
-            case 1:
-                performSegue(withIdentifier: "aboutVC", sender: nil)
-            case 2:
-                performSegue(withIdentifier: "scoreVC", sender: nil)
-            default:
-                break
-            }
-
-        default:
-            break
+        case .share:
+            performSegue(withIdentifier: "shareVC", sender: nil)
+        case .feedback:
+            performSegue(withIdentifier: "feedbackVC", sender: nil)
+        case .about:
+            performSegue(withIdentifier: "aboutVC", sender: nil)
+        case .score:
+            performSegue(withIdentifier: "scoreVC", sender: nil)
         }
     }
 }
