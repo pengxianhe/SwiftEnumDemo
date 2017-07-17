@@ -69,9 +69,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var dataArray: [[SetContent]] = [[.healthData, .unit, .share, .language, .introduce],
+    var dataArray: [[SetContent]] = [[.healthData, .unit, .language, .introduce],
                                      [.mode],
-                                     [.feedback, .about, .score]]
+                                     [.share, .feedback, .about, .score]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
